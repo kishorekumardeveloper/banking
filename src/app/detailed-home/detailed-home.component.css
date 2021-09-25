@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+:root {
+    --primary-color: #66d3fa;
+    --dark-color: #152b4b ;
+    --light-color: #f4f4f4;
+    --danger1-color: #FF00FF;
+    --success-color: #28a745;
+  }
+  
+ 
+
+  
+  /* Utilities */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+  
+  
+  
+  
+  /* Profiles Page */
+ 
+  
+  /* Profile Page */
+  .profile-grid {
+    display: grid;
+    grid-template-areas:
+      'top top'
+      'about about';
+      
+grid-gap: 1rem;
+  }
+  
+  .profile-top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .profile-top img {
+    width: 200px;
+  }
+  
+ 
+  
+  .profile-about {
+    grid-area: about;
+    text-align: center;
+  }
+  
+  .profile-about .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+
+  
+  
+  
+    /* Header/Logo Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+
+  
+  
+  

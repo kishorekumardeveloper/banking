@@ -1,0 +1,45 @@
+<section class="container">
+    <h1 class="large text-primary">   {{headerName}}
+    </h1>
+    <p class="lead">
+      <i class="fab fa-connectdevelop"></i> Apply for a credit card by comparing the best credit cards online. You can find credit cards offered by Top banks along with their features, benefits, fees, and latest offers, everything at a single place.
+
+
+    </p>
+    <h1 class="large text-primary">{{country | filter}}</h1>
+    <div class="profiles">
+    
+      <div *ngFor="let obj of profileDetails" class="profile bg-light">
+        <img
+          class="round-img"
+          src="{{obj.imgUrl}}"
+          alt=""
+        />
+        <div>
+          <h2>{{obj.name}}</h2>
+          <p>{{obj.occupation}} </p>
+          <p>{{obj.location}}</p>
+          <a [routerLink]=" ['/employee','home','detail',i]" class="button">View Profile</a>
+
+        </div>
+
+        <ul>
+          <li *ngFor="let data of obj.skills"  class="text-primary">
+            <i class="fas fa-check"></i>    {{data}}
+            
+          </li>
+          <li class="text-primary">
+            <i class="fas fa-check"></i> 
+          </li>
+          <li class="text-primary">
+            <i class="fas fa-check"></i> 
+          </li>
+        </ul>
+      </div>  
+     
+
+      
+      
+     
+    </div>
+  </section>

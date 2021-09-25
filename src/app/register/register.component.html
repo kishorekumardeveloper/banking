@@ -1,0 +1,51 @@
+<section class="container">
+    <h1 class="large text-primary">Register</h1>
+    <p class="lead"><i class="fas fa-user"></i> Please fill in this form to create an account.
+  </p>
+     <form [formGroup]="signUpForm" (ngSubmit)="onSubmitClick()" class="form">
+    
+      <div class="form-group">
+        <label for="firstName"><b>FirstName:</b></label>
+        <input type="text"  formControlName="firstName"/>
+        <div *ngIf="submitted && f.firstName.errors" class="danger">
+          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="email"><b>Email:</b></label>
+        <input type="email" formControlName="email"
+        />
+        <div *ngIf="submitted && f.email.errors" class="danger">
+          <div *ngIf="f.email.errors.required">Email is required</div>
+          <div *ngIf="f.email.errors.minlength">minlength to be 3</div>
+
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="password"><b>Password:</b></label>
+        <input
+          type="password" formControlName="password"
+       
+        />
+        <div *ngIf="submitted && f.password.errors" class="danger">
+          <div *ngIf="f.password.errors.required">Password is required</div>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="password"><b>Confirm Password:</b></label>
+        <input
+          type="password" formControlName="password2"
+          
+        />
+        <div *ngIf="submitted && f.password.errors" class="danger">
+          <div *ngIf="f.password.errors.required">password is required</div>
+      </div>
+      </div>
+    
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Register</button>
+      <p>Already have an account? <a href="#">Login in</a>.</p>
+
+    </form>
+   
+  </section>
